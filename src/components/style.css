@@ -1,0 +1,43 @@
+.app-header {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 20px;
+  background-color: #101010;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 60px;
+  color: #FFFFFF;
+  padding: 10px 20px;
+}
+.app-header .header-link {
+  cursor: pointer;
+}
+
+.app-user-list {
+  padding: 10px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.app-user-list .list-user {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+.app-user-list .list-user .about_user_link {
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #101010;
+  border: 1px solid #0D1E4B;
+}
+
+/*# sourceMappingURL=style.css.map */
