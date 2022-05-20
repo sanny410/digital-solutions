@@ -40,4 +40,86 @@
   border: 1px solid #0D1E4B;
 }
 
+.profile {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.profile-user {
+  width: 100%;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-size: 1rem;
+}
+.profile-user .user-username {
+  font-size: 1.7rem;
+}
+.profile-user .info-item {
+  font-size: 1.2rem;
+  border: 1px solid #000000;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+.profile-user .user-username {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+.profile-user .user-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.profile-user .user-info .company-title {
+  font-size: 1.3rem;
+}
+.profile-user .user-company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.user-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 20px;
+}
+.user-posts .post-title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+.user-posts .post-body {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.41);
+}
+.user-posts .post-promo {
+  border: 1px solid #000000;
+  padding: 10px;
+}
+.user-posts .post_link, .user-posts .posts_link {
+  width: 30%;
+  color: #FFFFFF;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px;
+  background: #101010;
+  border: 1px solid #0D1E4B;
+}
+.user-posts .posts_link {
+  width: 100%;
+  margin-top: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
