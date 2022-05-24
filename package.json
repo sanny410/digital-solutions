@@ -1,8 +1,7 @@
 {
   "name": "digital_solutions",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "/digital_solutions/",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -19,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "CI=false && react-scripts build",
+    "build": "react-scripts build",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
