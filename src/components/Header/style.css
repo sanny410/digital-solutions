@@ -1,0 +1,28 @@
+.app-header {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 20px;
+  background-color: #101010;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 60px;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.app-header .header-link {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+  width: 257px;
+  height: 40px;
+  color: black;
+  background: #FFFFFF;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

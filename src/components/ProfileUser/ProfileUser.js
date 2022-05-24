@@ -3,7 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import './style.scss'
 import PostPreview from "./PostPreview";
 import {useDispatch } from "react-redux";
-import {idUserLoad, postCurrentUserLoad} from "../store/actions";
+import {idUserLoad, postCurrentUserLoad} from "../../store/actions";
 
 const ProfileUser = ({list, posts}) => {
 

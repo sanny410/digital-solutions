@@ -1,15 +1,14 @@
-import './App.scss';
 import {Route, Routes} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 
-import UserList from "./components/UserLIst";
-import ProfileUser from "./components/ProfileUser";
-import PostsList from "./components/PostsList";
-import Post from "./components/Post";
-import Header from "./components/Header";
-import {commentsListLoad, listUserLoad, postListLoad} from "./store/actions";
+import UserList from "../UserList/UserLIst";
+import ProfileUser from "../ProfileUser/ProfileUser";
+import PostsList from "../PostList/PostsList";
+import Post from "../PostInfo/Post";
+import Header from "../Header/Header";
+import {commentsListLoad, listUserLoad, postListLoad} from "../../store/actions";
 
 
 function App() {

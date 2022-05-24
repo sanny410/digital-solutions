@@ -5,7 +5,7 @@ import {
     CURRENT_ID_USER,
     COMMENTS_LIST,
     MODAL_WINDOW_ACTIVE,
-    FORM_POST_TRUE
+    FORM_POST_STATUS
 } from "./types";
 
 
@@ -53,7 +53,7 @@ export const isActiveModal = (status) => {
 
 export const isFormPost = (status) => {
     return {
-        type: FORM_POST_TRUE,
+        type: FORM_POST_STATUS,
         payload: status
     }
 }

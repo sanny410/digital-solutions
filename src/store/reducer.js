@@ -5,7 +5,7 @@ import {
     CURRENT_ID_USER,
     COMMENTS_LIST,
     MODAL_WINDOW_ACTIVE,
-    FORM_POST_TRUE
+    FORM_POST_STATUS
 } from "./types";
 
 
@@ -52,7 +52,7 @@ export const reducer = (state = defaultState, action) => {
                 modalActive: action.payload
             }
 
-        case FORM_POST_TRUE:
+        case FORM_POST_STATUS:
             return {
                 ...state,
                 isFormPost: action.payload

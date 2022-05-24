@@ -1,10 +1,11 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {Link, useParams} from "react-router-dom";
+import { useParams} from "react-router-dom";
+import './style.scss'
 
 import Comment from "./Comment";
 import FormComment from "./FormComment";
-import {isActiveModal, isFormPost} from "../store/actions";
+import {isActiveModal} from "../../store/actions";
 
 const Post = () => {
 
@@ -32,8 +33,8 @@ const Post = () => {
                 {commentsCurrentPost.map(comment => {
                     return <Comment comment={comment} key={comment.id}/>
                 })}
-                <button className={"btn-add-comment"} onClick={isActive}>Add comment</button>
             </div>
+            <button className={"btn-add-comment"} onClick={isActive}>Add comment</button>
             <FormComment idPost={idPost}/>
         </div>
     );

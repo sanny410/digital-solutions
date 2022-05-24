@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import PostPreview from "./PostPreview";
+import PostPreview from "../ProfileUser/PostPreview";
 import './style.scss'
 
 const PostsList = () => {

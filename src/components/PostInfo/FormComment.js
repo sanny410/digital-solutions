@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
-import {isActiveModal, isFormPost} from "../store/actions";
+import {isActiveModal, isFormPost} from "../../store/actions";
 import Modal from "./Modal";
 
 const FormComment = ({idPost}) => {
@@ -40,6 +40,7 @@ const FormComment = ({idPost}) => {
                     setTimeout(() => {
                         isFormLoad(false)
                     }, 4000);
+                    console.log(response)
                 }
             })
             .catch(function (error) {
