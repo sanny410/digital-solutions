@@ -1,26 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link, useParams} from "react-router-dom";
 import './style.scss'
-import {useEffect} from "react";
-import Post from "./Post";
+import PostPreview from "./PostPreview";
+import {useDispatch } from "react-redux";
+import {idUserLoad, postCurrentUserLoad} from "../store/actions";
 
 const ProfileUser = ({list, posts}) => {
+
+    const dispatch = useDispatch();
 
     const { id } = useParams();
     const idUser = Number (id);
 
     const user = list[idUser - 1];
-    const promoPosts = []
-
-    const postCurrentUser = posts.filter(post => post.userId === idUser);
+    const promoPosts = [];
+    let postCurrentUser = posts.filter(post => post.userId === idUser);
 
     for (let i = 0; i < 3; i++) {
         promoPosts.push(postCurrentUser[i])
     }
 
+    const currentUserPostList = () => {
+        dispatch(postCurrentUserLoad(postCurrentUser))
+    }
+
+    const currentIdUser = () => {
+        dispatch(idUserLoad(id))
+    }
+
     useEffect(() => {
-        console.log(postCurrentUser)
-    },[]);
+        currentUserPostList(postCurrentUser)
+    }, [])
+
+    useEffect(() => {
+        currentIdUser(idUser - 1)
+    }, [])
+
 
     return (
         <div className="profile">
@@ -39,16 +54,10 @@ const ProfileUser = ({list, posts}) => {
             </div>
             <div className="user-posts">
                 {promoPosts.map(post => {
-                    return(
-                        <div className="post-promo" key={post.id}>
-                           <h3 className='post-title'>{post.title}</h3>
-                            <div className="post-body">{post.body.slice(0, 80) + '...'}</div>
-                            <Link to={`/post/${post.id}`} className={"post_link"}>Полный пост</Link>
-                        </div>
-                    )
+                    return <PostPreview post={post} key={post.id}/>
                 })
                 }
-                <Link to={`/posts/`} className={"posts_link"}>Все посты пользователя</Link>
+                <Link to={`/posts`} className={"posts_link"}>Все посты пользователя</Link>
             </div>
         </div>
     );

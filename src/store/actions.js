@@ -1,7 +1,8 @@
 import {
     USER_LIST,
     POST_LIST,
-    CURRENT_POSTS_USER
+    CURRENT_POSTS_USER,
+    CURRENT_ID_USER
 } from "./types";
 
 
@@ -19,9 +20,17 @@ export const postListLoad = (posts) => {
     }
 }
 
-export const postCurrentUserLoad = (posts) => {
+export const postCurrentUserLoad = (postList) => {
     return {
         type: CURRENT_POSTS_USER,
-        payload: posts
+        payload: postList
     }
 }
+
+export const idUserLoad = (id) => {
+    return {
+        type: CURRENT_ID_USER,
+        payload: id
+    }
+}
+

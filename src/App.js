@@ -48,7 +48,7 @@ function App() {
       <Routes>
           <Route exact path='/' element={<UserList list={list}/>}/>
           <Route path='/profile/:id' element={<ProfileUser list={list} posts={posts}/>}/>
-          <Route path='/posts' element={<PostsList posts={posts}/>}/>
+          <Route path='/posts' element={<PostsList />}/>
           <Route path='/post/:id' element={<Post />}/>
       </Routes>
     </div>

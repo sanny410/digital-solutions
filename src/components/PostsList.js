@@ -1,10 +1,19 @@
 import React from 'react';
+import {useSelector} from "react-redux";
+import PostPreview from "./PostPreview";
+import './style.scss'
 
 const PostsList = () => {
+
+    const postPreview = useSelector(state => state.postsCurrentUser);
+
     return (
-        <div>
-            
+        <div className="post-list">
+            {postPreview.map(post => {
+                return <PostPreview key={post.id} post={post}/>
+            })}
         </div>
+
     );
 };
 

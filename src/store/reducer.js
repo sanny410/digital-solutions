@@ -1,14 +1,16 @@
 import {
     USER_LIST,
     POST_LIST,
-    CURRENT_POSTS_USER
+    CURRENT_POSTS_USER,
+    CURRENT_ID_USER
 } from "./types";
 
 
 export const defaultState = {
     userList: [],
     postList: [],
-    postsCurrentUser: []
+    postsCurrentUser: [],
+    currentIdUser: ''
 }
 
 export const reducer = (state = defaultState, action) => {
@@ -27,6 +29,11 @@ export const reducer = (state = defaultState, action) => {
             return {
                 ...state,
                 postsCurrentUser: action.payload
+            }
+        case CURRENT_ID_USER:
+            return {
+                ...state,
+                currentIdUser: action.payload
             }
 
         default: {

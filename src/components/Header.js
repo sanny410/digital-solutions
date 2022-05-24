@@ -5,7 +5,7 @@ import './style.scss'
 const Header = () => {
     return (
         <div className="app-header">
-            <div className="header-link"><Link to={`/`} />Список пользователей</div>
+            <Link className="header-link" to={`/`}>Список пользователей</Link>
         </div>
     );
 };

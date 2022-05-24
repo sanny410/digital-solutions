@@ -9,9 +9,20 @@
   line-height: 60px;
   color: #FFFFFF;
   padding: 10px 20px;
+  font-family: 'Open Sans', sans-serif;
 
   .header-link {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px;
+    width: 257px;
+    height: 40px;
+    color: black;
+    background: #FFFFFF;
+    font-size: 0.9rem;
     cursor: pointer;
+    padding: 10px;
+    text-align: center;
   }
 }
 
@@ -95,45 +106,60 @@
   gap: 10px;
   padding: 10px 20px;
 
-  .post-title {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 23px;
-    margin-bottom: 10px;
-  }
+}
 
-  .post-body {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 17px;
-    color: rgba(0, 0, 0, 0.41);
+.post-title {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
 
-  }
+.post-body {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.41);
 
-  .post-promo {
-    border: 1px solid #000000;
-    padding: 10px;
-  }
+}
 
-  .post_link, .posts_link {
-    width: 30%;
-    color: #FFFFFF;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    text-align: center;
-    margin-top: 10px;
-    background: #101010;
-    border: 1px solid #0D1E4B;
-  }
+.post-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #000000;
+  padding: 10px;
+}
 
-  .posts_link {
-    width: 100%;
-    margin-top: 0;
+.post_link, .posts_link {
+  width: 30%;
+  color: #FFFFFF;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+  margin-top: 10px;
+  background: #101010;
+  border: 1px solid #0D1E4B;
+}
+
+.posts_link {
+  width: 100%;
+  margin-top: 0;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 20px;
+  grid-gap: 10px;
+
+  .post_link {
+    align-self: flex-end;
   }
 }
