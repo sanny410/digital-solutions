@@ -1,6 +1,6 @@
 import './App.scss';
 import {Route, Routes} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -9,7 +9,7 @@ import ProfileUser from "./components/ProfileUser";
 import PostsList from "./components/PostsList";
 import Post from "./components/Post";
 import Header from "./components/Header";
-import {listUserLoad, postListLoad} from "./store/actions";
+import {commentsListLoad, listUserLoad, postListLoad} from "./store/actions";
 
 
 function App() {
@@ -33,12 +33,23 @@ function App() {
         dispatch(postListLoad(response.data))
     }
 
+    const loadCommentList = async() => {
+        const response = await axios
+            .get("https://jsonplaceholder.typicode.com/comments")
+
+        dispatch(commentsListLoad(response.data))
+    }
+
     useEffect(() => {
         loadUserList()
     },[]);
 
     useEffect(() => {
         loadPostList()
+    },[]);
+
+    useEffect(() => {
+        loadCommentList()
     },[]);
 
 

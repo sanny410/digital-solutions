@@ -2,7 +2,10 @@ import {
     USER_LIST,
     POST_LIST,
     CURRENT_POSTS_USER,
-    CURRENT_ID_USER
+    CURRENT_ID_USER,
+    COMMENTS_LIST,
+    MODAL_WINDOW_ACTIVE,
+    FORM_POST_TRUE
 } from "./types";
 
 
@@ -10,7 +13,10 @@ export const defaultState = {
     userList: [],
     postList: [],
     postsCurrentUser: [],
-    currentIdUser: ''
+    currentIdUser: '',
+    commentsList: [],
+    modalActive: false,
+    isFormPost: false
 }
 
 export const reducer = (state = defaultState, action) => {
@@ -35,7 +41,22 @@ export const reducer = (state = defaultState, action) => {
                 ...state,
                 currentIdUser: action.payload
             }
+        case COMMENTS_LIST:
+            return {
+                ...state,
+                commentsList: action.payload
+            }
+        case MODAL_WINDOW_ACTIVE:
+            return {
+                ...state,
+                modalActive: action.payload
+            }
 
+        case FORM_POST_TRUE:
+            return {
+                ...state,
+                isFormPost: action.payload
+            }
         default: {
             return state
         }

@@ -9,7 +9,7 @@
   line-height: 60px;
   color: #FFFFFF;
   padding: 10px 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
 
   .header-link {
     font-style: normal;
@@ -42,7 +42,7 @@
     .about_user_link {
       color: #FFFFFF;
       font-size: 1rem;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Alegreya Sans SC', sans-serif;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -134,6 +134,7 @@
 }
 
 .post_link, .posts_link {
+  font-family: 'Alegreya Sans SC', sans-serif;
   width: 30%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -161,5 +162,139 @@
 
   .post_link {
     align-self: flex-end;
+  }
+}
+
+.post-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  .post-full-title {
+    font-size: 2.5rem;
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+  .post-full-body {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #0D1E4B;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .post-comments-title {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .post-comments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .btn-add-comment {
+    background: #101010;
+    border: 1px solid #0D1E4B;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .post-comment {
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .post-comment-title {
+      font-style: oblique;
+    }
+
+    .post-comment-email {
+      font-style: oblique;
+    }
+
+    .post-comment-body {
+      color: #000000;
+    }
+  }
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  height: 400px;
+  width: 400px;
+  transform: scale(0.5);
+  transition: 0.4s all;
+
+  &.load-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-align: center;
+    align-self: center;
+    font-size: 1.6rem;
+
+    #icon-smile {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.modal__content.active {
+  transform: scale(1);
+
+  .form-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .form-list-item {
+      margin-bottom: 10px;
+      font-family: 'Open Sans', sans-serif;
+
+      .btn-send-form {
+        background: #101010;
+        border: 1px solid #0D1E4B;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        color: #FFFFFF;
+      }
+    }
+
+      input, textarea {
+        width: 100%;
+      }
+
   }
 }
