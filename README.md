@@ -5,5 +5,5 @@ SPA на React + JS
 + Данные на сайте подтягиваются с **API jsonplaceholder**: https://jsonplaceholder.typicode.com/.
 + Дизайн сделан на основе макетов с **Figma**: https://www.figma.com/file/IpjzEBgEd5Tk3ry5g347Ux/Untitled.
 + Сборка **Webpack**. Менеджер пакетов - **NPM**. 
-+ Ссылка на Deploy: https://digital-solutions-sanny410.netlify.app/.
++ Ссылка на Deploy: https://sanny410.github.io/posts-users/.
 
